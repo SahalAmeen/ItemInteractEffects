@@ -20,7 +20,7 @@ class Main extends PluginBase implements Listener {
 	
 	public function onEnable() {
 		@mkdir($this->getDataFolder());
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(280 => array("on-use-tip-message" => "§bThe power of the stick has been used!", "effect-id" => 8, "effect-duration" => 1, "effect-amplifier" => 1)));
+		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(280 => array("on-use-tip-message" => "§bThe power of the stick has been used!", "effect-id" => 8, "effect-duration" => 1, "effect-amplifier" => 1, "Turn-off-message" => "§b§lThe power of the stick has been turned off!")));
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
@@ -39,6 +39,7 @@ class Main extends PluginBase implements Listener {
 					
 					case true:
 					$player->removeEffect($ic["effect-id"]);
+                                        $player->sendTip($ic["Turn-off-message"]);
 					break;
 				}
 			}
