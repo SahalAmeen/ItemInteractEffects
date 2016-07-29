@@ -39,7 +39,6 @@ class Main extends PluginBase implements Listener {
                                         $visible = $ic["visibility"]
 					$amplifier = $ic["effect-amplifier"];
 					$player->addEffect(Effect::getEffect($ic["effect-id"])->setDuration($ticks)->setAmplifier($amplifier)->setVisible->($visible));
-                                        $player->addEffect(Effect::getEffect($ic["effect-id-2"])->setDuration($ticks)->setAmplifier($amplifier)->setVisible->($visible));
 					$player->sendTip($ic["on-use-tip-message"]);
 					break;
 					
