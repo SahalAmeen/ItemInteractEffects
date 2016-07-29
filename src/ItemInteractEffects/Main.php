@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 
 	public function onEnable() {
 		@mkdir($this->getDataFolder());
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(280 => array("on-use-tip-message" => "§bThe power of the stick has been used!", "effect-id" => 8, "effect-duration" => 1, "effect-amplifier" => 1, "Turn-off-message" => "§b§lThe power of the stick has been turned off!", "visibility" => false)));
+		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array(280 => array("on-use-tip-message" => "§l§bThe power of the stick has been used!", "effect-id" => 8, "effect-duration" => 30, "effect-amplifier" => 1, "Turn-off-message" => "§b§lThe power of the stick has been turned off!", "visibility" => false)));
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
                 $this->getLogger()->info(TEXTFORMAT::AQUA . "ItemInteractEffects" . TEXTFORMAT::YELLOW . " Successfully loaded!");
 	}
