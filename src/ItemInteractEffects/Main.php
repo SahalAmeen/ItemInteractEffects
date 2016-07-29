@@ -9,7 +9,7 @@ use pocketmine\utils\Config;
 use pocketmine\event\Listener;
 class Main extends PluginBase implements Listener {
 	
-	####### ####### #######   #
+	####### ####### #######   ##
 	       #                #         #                 #
 	       #                #         #######
 	       #                #         #
